@@ -1,0 +1,54 @@
+<!-- hdfs-site.xml -->
+<configuration>
+  <property>
+    <name>dfs.nameservices</name>
+    <value>master</value>
+  </property>
+  <property>
+    <name>dfs.ha.namenodes.master</name>
+    <!-- 别名 -->
+    <value>nn4,nn5</value>
+  </property>
+  <property>
+    <name>dfs.namenode.rpc-address.master.nn4</name>
+    <value>node04:8020</value>
+  </property>
+  <property>
+    <name>dfs.namenode.rpc-address.master.nn5</name>
+    <value>node05:8020</value>
+  </property>
+  <property>
+    <name>dfs.namenode.http-address.master.nn4</name>
+    <value>node04:50070</value>
+  </property>
+  <property>
+    <name>dfs.namenode.http-address.master.nn5</name>
+    <value>node05:50070</value>
+  </property>
+  <property>
+    <!-- 指定namenode元数据存储在journalnode中的路径 -->
+    <name>dfs.namenode.shared.edits.dir</name>
+    <value>qjournal://node01:8485;node02:8485;node03:8485/master</value>
+  </property>
+  <property>
+  <!-- 指定HDFS客户端连接active namenode的java类 -->
+    <name>dfs.client.failover.proxy.provider.master</name>
+  <value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+  </property>
+  <property>
+   <!-- 配置隔离机制为ssh 防止脑裂 -->
+    <name>dfs.ha.fencing.methods</name>
+    <value>sshfence</value>
+  </property>
+
+  <property>
+   <!-- 指定journalnode日志文件存储的路径 -->
+    <name>dfs.journalnode.edits.dir</name>
+    <value>/opt/hadoop/data</value>
+  </property>
+  <property>
+  <!-- 开启自动故障转移 -->
+     <name>dfs.ha.automatic-failover.enabled</name>
+     <value>true</value>
+  </property>
+</configuration>

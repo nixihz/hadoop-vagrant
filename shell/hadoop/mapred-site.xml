@@ -1,0 +1,9 @@
+<!-- 配置 mapreduce -->
+<!-- mapred-site.xml: -->
+<configuration>
+  <property>
+  <!-- 指定使用 Yarn 来进行资源调度 -->
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+</configuration>
