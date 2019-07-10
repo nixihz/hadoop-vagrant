@@ -2,5 +2,5 @@
 
 for i in `seq -f '%02g' 1 5`;
 do
-  vagrant halt node$i
+  vagrant resume node$i
 done
