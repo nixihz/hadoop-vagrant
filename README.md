@@ -92,6 +92,26 @@ start-yarn.sh
 
 
 
+## vagrant
+
+``` 
+## up
+./command/up.sh
+
+## suspend
+./command/suspend.sh
+
+## resume suspended
+./command/resume.sh
+
+## shutdown
+./command/halt.sh
+```
+
+
+
+
+
 ## Check
 
 http://node04:50070
