@@ -13,8 +13,8 @@ export ZOOKEEPER_HOME=/opt/src/zookeeper-3.4.14;
 export PATH=$ZOOKEEPER_HOME/bin:$PATH;
 
 ## jdk
-JAVA_HOME=/opt/src/jdk1.8.0_112
-JRE_HOME=/opt/src/jdk1.8.0_112/jre
+JAVA_HOME=/opt/src/jdk1.8.0_212
+JRE_HOME=/opt/src/jdk1.8.0_212/jre
 JAVA_BIN=$JAVA_HOME/bin
 CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
 CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib

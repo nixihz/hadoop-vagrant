@@ -15,11 +15,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.provision "shell", path: "shell/bootstrap.sh", run: "once" # always
-  config.vm.provision "shell", path: "shell/hadoop/install.sh", run: "always" # always
+  config.vm.provision "shell", path: "shell/hadoop/install.sh", run: "once" # always
 
   config.vm.define :node01 do |node01|
-    # uncomment the line below to set up the ambari dev environment
-    node01.vm.provision "shell", inline: "echo hello", run: "always"
+    # node01.vm.provision "shell", inline: "echo hello", run: "always"
     node01.vm.hostname = "node01"
     node01.vm.network :private_network, ip: "192.168.74.101"
     node01.vm.provision "shell", path: "shell/zookeeper/install.sh", run: "once"

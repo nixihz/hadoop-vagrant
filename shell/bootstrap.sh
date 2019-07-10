@@ -30,8 +30,8 @@ echo "/swapfile       none    swap    sw      0       0" >> /etc/fstab
 # rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
 
 ## java
-cp /vagrant/jdk1.8.0_112.zip /opt/src/
+cp /vagrant/jdk-8u212-linux-x64.tar.gz /opt/src/
 cd /opt/src/;
-unzip jdk1.8.0_112.zip -d /opt/src/
+tar -xzf /opt/src/jdk-8u212-linux-x64.tar.gz -C /opt/src
 
 cp /vagrant/bash_profile /home/vagrant/.bash_profile
