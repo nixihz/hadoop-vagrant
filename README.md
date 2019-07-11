@@ -12,7 +12,7 @@
 
 
 
-## prerequisite
+## Prerequisite
 
 #### Get vagrant
 
